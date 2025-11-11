@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interativo - Crimes SP</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* --- GERAL --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* --- LAYOUT DO DASHBOARD (Estilo Power BI) --- */
+        .dashboard-container {
+            display: flex;
+            width: 100%;
+        }
+
+        /* --- BARRA LATERAL (FILTROS) --- */
+        .sidebar {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-size: 1.5em;
+            color: #3498db;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .filter-group {
+            margin-top: 20px;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .filter-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        /* --- CONTEÚDO PRINCIPAL (KPIs e Gráficos) --- */
+        .main-content {
+            flex: 1;
+            padding: 25px;
+            overflow-y: auto;
+        }
+
+        .main-content h1 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+
+        /* --- CARTÕES (KPIs) --- */
+        .kpi-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .kpi-card {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .kpi-card .title {
+            font-size: 1em;
+            color: #555;
+            font-weight: 600;
+        }
+
+        .kpi-card .value {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #3498db;
+            margin: 10px 0;
+        }
+
+        .kpi-card .change {
+            font-size: 1em;
+            font-weight: 600;
+        }
+
+        .kpi-card .change.positive {
+            color: #e74c3c;
+        }
+
+        /* Mais crimes = ruim */
+        .kpi-card .change.negative {
+            color: #2ecc71;
+        }
+
+        /* Menos crimes = bom */
+
+        /* --- GRÁFICOS --- */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: 65% 35%;
+            /* Gráfico de barras maior, pizza menor */
+            gap: 20px;
+            min-height: 450px;
+        }
+
+        .chart-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        @media (max-width: 1200px) {
+            .chart-grid {
+                grid-template-columns: 1fr;
+                /* Empilha os gráficos em telas menores */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dashboard-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>Filtros</h2>
+            <div class="filter-group">
+                <label for="delegacia-filter">Região (Delegacia)</label>
+                <select id="delegacia-filter">
+                </select>
+            </div>
+            <p style="margin-top: 20px; color: #777; font-style: italic;">Selecione uma região para atualizar o
+                dashboard.</p>
+        </aside>
+
+        <main class="main-content">
+            <h1 id="dashboard-title">Dashboard: Crimes em SP (Geral)</h1>
+
+            <section class="kpi-container">
+                <div class="kpi-card">
+                    <div class="title">Total Furtos (2020)</div>
+                    <div class="value" id="kpi-furtos-2020">-</div>
+                    <div class="change" id="kpi-furtos-change">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="title">Total Roubos (2020)</div>
+                    <div class="value" id="kpi-roubos-2020">-</div>
+                    <div class="change" id="kpi-roubos-change">-</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="title">Total Homicídios (2020)</div>
+                    <div class="value" id="kpi-homicidios-2020">-</div>
+                    <div class="change" id="kpi-homicidios-change">-</div>
+                </div>
+            </section>
+
+            <section class="chart-grid">
+                <div class="chart-container">
+                    <h3>Comparativo Anual (2019 vs 2020)</h3>
+                    <canvas id="barChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Mix de Crimes (2020)</h3>
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // -----------------------------------------------------------------
+        // ETAPA 1: DADOS
+        // Em um projeto real, isso viria de uma API. Aqui, colamos os dados do CSV.
+        // Os números já estão limpos (sem pontos).
+        // -----------------------------------------------------------------
+        const allData = [
+            { Delegacia: "001 DP - Sé", Ano: 2020, Furtos: 8442, Roubos: 3201, Homicidio: 0, Latrocinio: 14 },
+            { Delegacia: "001 DP - Sé", Ano: 2019, Furtos: 12997, Roubos: 3404, Homicidio: 0, Latrocinio: 15 },
+            { Delegacia: "002 DP - Bom Retiro", Ano: 2020, Furtos: 3744, Roubos: 970, Homicidio: 0, Latrocinio: 4 },
+            { Delegacia: "002 DP - Bom Retiro", Ano: 2019, Furtos: 4863, Roubos: 1063, Homicidio: 0, Latrocinio: 3 },
+            { Delegacia: "003 DP - Campos Elíseos", Ano: 2020, Furtos: 4851, Roubos: 3491, Homicidio: 5, Latrocinio: 2 },
+            { Delegacia: "003 DP - Campos Elíseos", Ano: 2019, Furtos: 6636, Roubos: 3794, Homicidio: 7, Latrocinio: 2 },
+            { Delegacia: "014 DP - Pinheiros", Ano: 2020, Furtos: 7578, Roubos: 1845, Homicidio: 1, Latrocinio: 1 },
+            { Delegacia: "014 DP - Pinheiros", Ano: 2019, Furtos: 10731, Roubos: 2439, Homicidio: 4, Latrocinio: 2 },
+            { Delegacia: "027 DP - Campo Belo", Ano: 2020, Furtos: 5048, Roubos: 1913, Homicidio: 0, Latrocinio: 0 },
+            { Delegacia: "027 DP - Campo Belo", Ano: 2019, Furtos: 6720, Roubos: 2471, Homicidio: 1, Latrocinio: 1 },
+            { Delegacia: "049 DP - São Mateus", Ano: 2020, Furtos: 3432, Roubos: 2360, Homicidio: 11, Latrocinio: 1 },
+            { Delegacia: "049 DP - São Mateus", Ano: 2019, Furtos: 4578, Roubos: 2795, Homicidio: 10, Latrocinio: 1 }
+        ];
+
+        // -----------------------------------------------------------------
+        // ETAPA 2: Variáveis Globais para os Gráficos
+        // -----------------------------------------------------------------
+        let barChart;
+        let pieChart;
+        const ctxBar = document.getElementById('barChart').getContext('2d');
+        const ctxPie = document.getElementById('pieChart').getContext('2d');
+
+        // -----------------------------------------------------------------
+        // ETAPA 3: Função principal de INICIALIZAÇÃO do Dashboard
+        // -----------------------------------------------------------------
+        function initDashboard() {
+            // Popula o filtro de delegacias
+            const filter = document.getElementById('delegacia-filter');
+            // Pega nomes únicos de delegacias
+            const delegacias = [...new Set(allData.map(d => d.Delegacia))];
+
+            filter.innerHTML = `<option value="TODAS">--- Todas as Regiões ---</option>`; // Opção "Geral"
+            delegacias.sort().forEach(delegacia => {
+                filter.innerHTML += `<option value="${delegacia}">${delegacia}</option>`;
+            });
+
+            // Cria os gráficos vazios
+            createBarChart();
+            createPieChart();
+
+            // Atualiza o dashboard com os dados de "TODAS"
+            updateDashboard("TODAS");
+
+            // Adiciona o "listener" (Ouvinte) que dispara a mágica
+            filter.addEventListener('change', (e) => {
+                updateDashboard(e.target.value);
+            });
+        }
+
+        // -----------------------------------------------------------------
+        // ETAPA 4: Função Mestra que ATUALIZA TUDO (O "Motor")
+        // -----------------------------------------------------------------
+        function updateDashboard(selectedDelegacia) {
+
+            // --- 4.1: Filtra os dados com base na seleção ---
+            let filteredData;
+            if (selectedDelegacia === "TODAS") {
+                filteredData = allData;
+                document.getElementById('dashboard-title').innerText = "Dashboard: Crimes em SP (Geral)";
+            } else {
+                filteredData = allData.filter(d => d.Delegacia === selectedDelegacia);
+                document.getElementById('dashboard-title').innerText = `Dashboard: ${selectedDelegacia}`;
+            }
+
+            // --- 4.2: Agrega os dados para os KPIs e Gráficos ---
+            let totalFurtos2019 = 0, totalFurtos2020 = 0;
+            let totalRoubos2019 = 0, totalRoubos2020 = 0;
+            let totalHomicidios2019 = 0, totalHomicidios2020 = 0;
+
+            filteredData.forEach(d => {
+                const totalHomicidios = d.Homicidio + d.Latrocinio; // Somando Homicídio e Latrocínio
+                if (d.Ano === 2019) {
+                    totalFurtos2019 += d.Furtos;
+                    totalRoubos2019 += d.Roubos;
+                    totalHomicidios2019 += totalHomicidios;
+                } else if (d.Ano === 2020) {
+                    totalFurtos2020 += d.Furtos;
+                    totalRoubos2020 += d.Roubos;
+                    totalHomicidios2020 += totalHomicidios;
+                }
+            });
+
+            // --- 4.3: Atualiza os KPIs (Cartões) ---
+            updateKPI('kpi-furtos', totalFurtos2020, totalFurtos2019);
+            updateKPI('kpi-roubos', totalRoubos2020, totalRoubos2019);
+            updateKPI('kpi-homicidios', totalHomicidios2020, totalHomicidios2019);
+
+            // --- 4.4: Atualiza os Gráficos ---
+
+            // Bar Chart
+            const barData2019 = [totalFurtos2019, totalRoubos2019, totalHomicidios2019];
+            const barData2020 = [totalFurtos2020, totalRoubos2020, totalHomicidios2020];
+            barChart.data.datasets[0].data = barData2019;
+            barChart.data.datasets[1].data = barData2020;
+            barChart.update();
+
+            // Pie Chart
+            const pieData = [totalFurtos2020, totalRoubos2020, totalHomicidios2020];
+            pieChart.data.datasets[0].data = pieData;
+            pieChart.update();
+        }
+
+        // -----------------------------------------------------------------
+        // ETAPA 5: Funções Auxiliares
+        // -----------------------------------------------------------------
+
+        // Função para atualizar um cartão (KPI)
+        function updateKPI(elementIdPrefix, value2020, value2019) {
+            document.getElementById(`${elementIdPrefix}-2020`).innerText = value2020.toLocaleString('pt-BR');
+            const changeElement = document.getElementById(`${elementIdPrefix}-change`);
+
+            if (value2019 === 0) {
+                changeElement.innerText = "s/ dados 2019";
+                changeElement.className = "change";
+                return;
+            }
+
+            const change = ((value2020 - value2019) / value2019);
+            const changeText = (change * 100).toFixed(1) + "% vs 2019";
+
+            changeElement.innerText = changeText;
+            if (change > 0) {
+                changeElement.className = "change positive"; // Ruim (aumentou)
+            } else {
+                changeElement.className = "change negative"; // Bom (diminuiu)
+            }
+        }
+
+        // Função para formatar números no tooltip
+        function formatTooltipNumber(context) {
+            let label = context.dataset.label || '';
+            if (label) { label += ': '; }
+            if (context.parsed.y !== null) { label += context.parsed.y.toLocaleString('pt-BR'); }
+            return label;
+        }
+
+        // Funções para criar os gráficos (só rodam uma vez)
+        function createBarChart() {
+            barChart = new Chart(ctxBar, {
+                type: 'bar',
+                data: {
+                    labels: ['Furtos', 'Roubos', 'Homicídios+Latroc.'],
+                    datasets: [
+                        { label: '2019', data: [], backgroundColor: 'rgba(54, 162, 235, 0.5)' },
+                        { label: '2020', data: [], backgroundColor: 'rgba(255, 99, 132, 0.8)' }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    /* maintainAspectRatio: false, */ // <-- CORREÇÃO APLICADA
+                    scales: { y: { beginAtZero: true } },
+                    plugins: { tooltip: { callbacks: { label: formatTooltipNumber } } }
+                }
+            });
+        }
+
+        function createPieChart() {
+            pieChart = new Chart(ctxPie, {
+                type: 'pie',
+                data: {
+                    labels: ['Furtos', 'Roubos', 'Homicídios+Latroc.'],
+                    datasets: [{
+                        data: [],
+                        backgroundColor: ['#36A2EB', '#FF6384', '#FFCD56']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    /* maintainAspectRatio: false, */ // <-- CORREÇÃO APLICADA
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    let label = context.label || '';
+                                    if (label) { label += ': '; }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed.toLocaleString('pt-LBR');
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // -----------------------------------------------------------------
+        // ETAPA 6: Inicia o Dashboard quando a página carrega
+        // -----------------------------------------------------------------
+        window.onload = initDashboard;
+
+    </script>
+</body>
+
+</html>
