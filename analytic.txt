@@ -1,0 +1,3 @@
+Analize oriunda de alguma coisa: Jogo
+
+O Clash Royale é um ecossistema movido a Data Analytics, onde o "meta" do jogo é constantemente ajustado. A Supercell analisa taxas de uso e vitória de cada carta para decidir "buffs" e "nerfs", garantindo que nenhuma estratégia domine. A retenção de jogadores é otimizada pela análise de "churn" (abandono) em arenas específicas, levando a ajustes na progressão. Até o matchmaking e as ofertas da loja são otimizados por dados para maximizar o engajamento e a monetização.

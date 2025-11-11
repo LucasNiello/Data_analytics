@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Dados - Criminalidade SP</title>
+    <style>
+        /* CSS Estilizado para o Relatório */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #3498db;
+            margin-top: 40px;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+        }
+
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+        }
+
+        p,
+        ul {
+            font-size: 16px;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Estilização da Tabela de Dados */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        thead {
+            background-color: #34495e;
+            color: #ffffff;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Classes de Destaque */
+        .insight {
+            background-color: #ecf8ff;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .insight-queda {
+            background-color: #e8fef1;
+            border-left: 5px solid #2ecc71;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .insight-aumento {
+            background-color: #fef0f0;
+            border-left: 5px solid #e74c3c;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+
+        .insight-queda b {
+            color: #27ae60;
+        }
+
+        .insight-aumento b {
+            color: #c0392b;
+        }
+
+        .box-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .box {
+            flex-basis: 45%;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Relatório de Análise de Dados: Criminalidade na Capital de SP (2019 vs 2020)</h1>
+
+        <h2>1. Definição do Objetivo</h2>
+        <p>
+            O objetivo desta análise é entender o impacto do ano de 2020 (marcado pelo início da pandemia de COVID-19)
+            nos índices de criminalidade na cidade de São Paulo, comparando-os com o ano anterior, 2019.
+        </p>
+        <p><strong>Pergunta de Negócio (Hipótese):</strong> "A pandemia e as medidas de restrição de circulação
+            alteraram os padrões de crimes na capital?"</p>
+
+        <h2>2. Coleta e Preparação dos Dados</h2>
+        <ul>
+            <li><strong>Coleta:</strong> Os dados foram fornecidos através do arquivo
+                <code>Crimes em Sao Paulo-Capital 2020 e 2019.csv</code>, com origem presumida da Secretaria de
+                Segurança Pública de SP.</li>
+            <li><strong>Preparação (Limpeza):</strong>
+                <ul>
+                    <li>Os dados brutos estavam formatados com <code>"."</code> (ponto) como separador de milhar (ex:
+                        "8.442").</li>
+                    <li>Para a análise, todos os valores numéricos foram convertidos para inteiros (ex: "8.442" ->
+                        8442).</li>
+                    <li>Foi verificado que o arquivo continha colunas duplicadas ou ambíguas (ex: "Roubo de Veiculo" e
+                        "Roubo de veiculos"). Para este relatório, focamos nas colunas principais e inequívocas.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>3. Análise dos Dados (Descritiva e Diagnóstica)</h2>
+
+        <h3>Análise Descritiva: O que aconteceu?</h3>
+        <p>Analisamos os dados agregados da cidade (somando todas as delegacias) para os principais tipos de crime. Os
+            resultados mostram uma mudança drástica no perfil criminal entre 2019 e 2020.</p>
+
+        <p class="insight-queda">
+            <strong>Principal Insight (Queda):</strong> Houve uma <strong>queda massiva de 30%</strong> nos
+            <strong>Furtos na Região</strong> e de <strong>24%</strong> nos <strong>Roubos em geral</strong>. Isso
+            representa dezenas de milhares de ocorrências a menos.
+        </p>
+
+        <p class="insight-aumento">
+            <strong>Ponto de Atenção (Aumento):</strong> Por outro lado, crimes mais violentos e específicos, como
+            <strong>Latrocínios</strong> (roubo seguido de morte), tiveram um <strong>aumento de 8,5%</strong>.
+        </p>
+
+        <h3>Tabela Comparativa: Totais da Capital (2019 vs 2020)</h3>
+        <p><i>Nota: Estes são os valores totais calculados a partir da soma de todas as delegacias no arquivo .csv
+                fornecido.</i></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo de Crime</th>
+                    <th>Total 2019</th>
+                    <th>Total 2020</th>
+                    <th>Variação (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Furtos na região</strong></td>
+                    <td>533.451</td>
+                    <td>373.189</td>
+                    <td><b style="color: #27ae60;">-30,0%</b></td>
+                </tr>
+                <tr>
+                    <td><strong>Roubos</strong></td>
+                    <td>269.479</td>
+                    <td>204.665</td>
+                    <td><b style="color: #27ae60;">-24,1%</b></td>
+                </tr>
+                <tr>
+                    <td><strong>Furto de veículo</strong></td>
+                    <td>90.252</td>
+                    <td>70.198</td>
+                    <td><b style="color: #27ae60;">-22,2%</b></td>
+                </tr>
+                <tr>
+                    <td><strong>Roubo de Veiculo</strong></td>
+                    <td>41.650</td>
+                    <td>32.093</td>
+                    <td><b style="color: #27ae60;">-23,0%</b></td>
+                </tr>
+                <tr>
+                    <td><strong>Latrocínios</strong></td>
+                    <td>164</td>
+                    <td>178</td>
+                    <td><b style="color: #c0392b;">+8,5%</b></td>
+                </tr>
+                <tr>
+                    <td><strong>Homicídio Doloso</strong></td>
+                    <td>602</td>
+                    <td>595</td>
+                    <td><b style="color: #27ae60;">-1,2%</b></td>
+                </tr>
+                <tr>
+                    <td><strong>Estupro de vulnerável</strong></td>
+                    <td>4.757</td>
+                    <td>4.329</td>
+                    <td><b style="color: #27ae60;">-9,0%</b></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Análise Diagnóstica: Por que isso aconteceu?</h3>
+        <p>A explicação mais provável para as quedas drásticas está diretamente ligada à <strong>pandemia de
+                COVID-19</strong>:</p>
+        <ul>
+            <li><strong>Menos Oportunidades:</strong> Com lockdowns, home office e menor circulação de pessoas,
+                especialmente em centros comerciais (como a Sé, que teve queda de 35% em furtos) e transporte público,
+                os "crimes de oportunidade" (furtos e roubos) caíram vertiginosamente.</li>
+            <li><strong>Menos Alvos:</strong> Menos carros nas ruas também significaram menos furtos e roubos de
+                veículos.</li>
+            <li><strong>Subnotificação?</strong> Uma queda em "Estupro de vulnerável" (-9%) é um dado complexo. A queda
+                pode ser real, mas também pode indicar uma dificuldade de denúncia durante o confinamento, onde a vítima
+                poderia estar isolada com o agressor.</li>
+        </ul>
+
+        <h2>4. Análise Preditiva e Prescritiva (Próximos Passos)</h2>
+
+        <h3>Análise Preditiva: O que pode acontecer?</h3>
+        <p>
+            É provável que, com a normalização da circulação de pessoas (pós-pandemia), os índices de crimes
+            patrimoniais (furtos e roubos) <strong>voltem a subir</strong>, retornando aos níveis de 2019. O ano de 2020
+            pode ser visto como um "ponto fora da curva" estatístico.
+        </p>
+
+        <h3>Análise Prescritiva: O que devemos fazer?</h3>
+        <p>
+            Com base na análise, recomenda-se:
+        </p>
+        <ol>
+            <li><strong>Foco no Pós-Pandemia:</strong> As forças de segurança não devem usar os dados de 2020 como base
+                para o planejamento de recursos de 2021/2022. Os padrões de 2019 são um indicador mais confiável da
+                "normalidade".</li>
+            <li><strong>Investigar Latrocínios:</strong> O aumento de 8,5% nos Latrocínios, mesmo com menos pessoas na
+                rua, é um sinal de alerta grave que exige uma análise qualitativa e investigativa específica.</li>
+            <li><strong>Monitorar Áreas de Risco:</strong> Criar um dashboard (no Power BI, por exemplo) para monitorar
+                o retorno dos furtos e roubos em áreas comerciais e turísticas (ex: Sé, Bom Retiro) conforme a economia
+                reabre.</li>
+        </ol>
+
+    </div>
+
+</body>
+
+</html>
