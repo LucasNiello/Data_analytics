@@ -1,0 +1,11 @@
+ClientesCodigo,ClientesNome,ClientesNascimento,ClientesEndereco,ClientesBairro,ClientesCidade,ClientesUF,ClientesCEP,ClientesTelefone,ClientesEmail
+1,Ana Carolina,12/23/85 0:00,Rua Santa Maria 67,Sumaré,São Paulo,SP,05656-500,7777-7777,anacarol@terra.com.br#mailto:anacarol@terra.com.br#
+2,Simone,8/5/64 0:00,Rua Maria Antonia 678,Centro,São Paulo,SP,01223-999,5555-5555,siferreira@hotmail.com#mailto:siferreira@hotmail.com#
+3,Henrique,10/12/54 0:00,Rua California 784 - ap 47,Brooklin,São Paulo,SP,04589-900,5656-9898,henri@terra.com.br#mailto:henri@terra.com.br#
+4,Maria Cecilia,11/15/54 0:00,Rua Borges Lagoa 672,Vila Mariana,São Paulo,SP,04020-000,5454-8787,cecili@zipmail.com#mailto:cecili@zipmail.com#
+5,Cristina,5/11/60 0:00,Rua Itambé 78,Perdizes,São Paulo,SP,05016-001,6363-9895,cristina@hotmail.com#mailto:cristina@hotmail.com#
+6,Stella,6/26/59 0:00,Rua Zacharias de Gois 895,Campo Belo,São Paulo,SP,04878-000,2365-7452,stella@uol.com.br#mailto:stella@uol.com.br#
+7,André,12/23/84 0:00,Rua Bela Cintra 765 - ap. 123,Jardins,São Paulo,SP,05123-004,3658-1234,andre@uol.com.br#mailto:andre@uol.com.br#
+8,Sergio,3/31/74 0:00,Rua do Remanso 78,Vila Esperança,Campinas,SP,13165-000,3535-3535,
+9,Claudio,2/28/75 0:00,Rua Senador Campos 89,Vila Nova,Campinas,SP,13100-001,3636-5454,
+10,Myrian,4/12/77 0:00,Rua Maranhão 89,Higienópolis,São Paulo,SP,05698-890,8989-5656,

@@ -1,0 +1,111 @@
+ClientesCodigo,ClientesNome,ClientesNascimento,ClientesEndereco,ClientesBairro,ClientesCidade,ClientesUF,ClientesCEP,ClientesTelefone,ClientesEmail
+1,Ana Carolina,12/23/85 0:00,Rua Santa Maria 67,Sumaré,São Paulo,SP,05656-500,7777-7777,anacarol@terra.com.br#mailto:anacarol@terra.com.br#
+2,Simone,8/5/64 0:00,Rua Maria Antonia 678,Centro,São Paulo,SP,01223-999,5555-5555,siferreira@hotmail.com#mailto:siferreira@hotmail.com#
+3,Henrique,10/12/54 0:00,Rua California 784 - ap 47,Brooklin,São Paulo,SP,04589-900,5656-9898,henri@terra.com.br#mailto:henri@terra.com.br#
+4,Maria Cecilia,11/15/54 0:00,Rua Borges Lagoa 672,Vila Mariana,São Paulo,SP,04020-000,5454-8787,cecili@zipmail.com#mailto:cecili@zipmail.com#
+5,Cristina,5/11/60 0:00,Rua Itambé 78,Perdizes,São Paulo,SP,05016-001,6363-9895,cristina@hotmail.com#mailto:cristina@hotmail.com#
+6,Stella,6/26/59 0:00,Rua Zacharias de Gois 895,Campo Belo,São Paulo,SP,04878-000,2365-7452,stella@uol.com.br#mailto:stella@uol.com.br#
+7,André,12/23/84 0:00,Rua Bela Cintra 765 - ap. 123,Jardins,São Paulo,SP,05123-004,3658-1234,andre@uol.com.br#mailto:andre@uol.com.br#
+8,Sergio,3/31/74 0:00,Rua do Remanso 78,Vila Esperança,Campinas,SP,13165-000,3535-3535,
+9,Claudio,2/28/75 0:00,Rua Senador Campos 89,Vila Nova,Campinas,SP,13100-001,3636-5454,
+10,Myrian,4/12/77 0:00,Rua Maranhão 89,Higienópolis,São Paulo,SP,05698-890,8989-5656,
+11,Srta. Alexia da Mota,12/10/71 0:00,"Área Ramos, 21",Manacas,Rezende de Cardoso,PR,03683594,17340325,paulo26@uol.com.br#mailto:paulo26@uol.com.br#
+12,Dr. André Monteiro,06/27/80 0:00,Rodovia Alves,Cdi Jatoba,Barros,MA,25715553,47106264,fernandesrebeca@campos.com#mailto:fernandesrebeca@campos.com#
+13,Ana Carolina Costa,02/04/50 0:00,"Esplanada Araújo, 284",Vila Minaslandia,da Rosa Paulista,DF,81409-348,69820264,lorenzorezende@monteiro.com#mailto:lorenzorezende@monteiro.com#
+14,Mariana Almeida,05/23/51 0:00,Conjunto de Cunha,Bandeirantes,Nogueira,TO,89290-666,63848761,fda-costa@uol.com.br#mailto:fda-costa@uol.com.br#
+15,Maria Vitória Ribeiro,08/21/50 0:00,"Passarela Aragão, 458",Horto,Mendes,SP,77083779,64726902,diogoda-rocha@cavalcanti.br#mailto:diogoda-rocha@cavalcanti.br#
+16,João Lucas da Mata,11/26/88 0:00,"Trevo de Silva, 2",Vila São Rafael,da Rosa Paulista,ES,51337424,26146642,pietra58@aragao.com#mailto:pietra58@aragao.com#
+17,Marina Lima,09/03/47 0:00,"Feira Benjamin Castro, 3",Minaslandia,da Cunha,GO,75414-300,47237280,xmendes@gmail.com#mailto:xmendes@gmail.com#
+18,André Costela,09/27/74 0:00,"Área Vitor Hugo Sales, 577",Confisco,Jesus Grande,RS,58443273,00788849,maria-claraalves@da.net#mailto:maria-claraalves@da.net#
+19,Sr. Felipe Castro,04/02/60 0:00,Viela Giovanna Rodrigues,Santo Agostinho,das Neves,PI,32493-598,96654207,vpinto@nascimento.br#mailto:vpinto@nascimento.br#
+20,Sra. Ana Lívia das Neves,09/28/79 0:00,"Setor Stella Sales, 8",Vila Nova Gameleira 2ª Seção,Santos da Mata,MG,15770-467,45552826,caionascimento@santos.org#mailto:caionascimento@santos.org#
+21,Nicole Aragão,12/09/52 0:00,"Lagoa da Conceição, 8",Vila Fumec,Teixeira,CE,18298758,22041333,franciscofogaca@campos.com#mailto:franciscofogaca@campos.com#
+22,Lara Ribeiro,11/21/88 0:00,"Fazenda de Pereira, 483",Mala E Cuia,Ribeiro do Amparo,ES,58893-662,64473696,gomesmarina@souza.com#mailto:gomesmarina@souza.com#
+23,Dr. Miguel Cunha,12/31/73 0:00,"Estrada Cunha, 60",Jardim Atlântico,Barros de Ribeiro,RJ,25824800,70129780,dsilva@gmail.com#mailto:dsilva@gmail.com#
+24,Samuel Novaes,09/03/87 0:00,"Vila Nascimento, 266",Colégio Batista,Araújo da Mata,SP,30830-239,58203244,zmoraes@cardoso.br#mailto:zmoraes@cardoso.br#
+25,Benjamin Ramos,07/21/84 0:00,"Colônia Cardoso, 21",Vila Suzana Segunda Seção,Monteiro de da Rocha,RN,10307621,58373222,lara54@gmail.com#mailto:lara54@gmail.com#
+26,Bianca Jesus,08/12/94 0:00,Fazenda Cardoso,Vila Jardim Leblon,da Rosa de da Cunha,RN,63830702,65925855,mariane14@hotmail.com#mailto:mariane14@hotmail.com#
+27,Luiza Costa,05/24/54 0:00,"Passarela de Araújo, 7",Beija Flor,Melo,AC,20761-356,43295253,maria-aliceviana@gmail.com#mailto:maria-aliceviana@gmail.com#
+28,Guilherme Azevedo,03/20/51 0:00,"Avenida de Lopes, 16",Savassi,Fogaça Grande,PI,90621-584,30278660,eduardobarbosa@hotmail.com#mailto:eduardobarbosa@hotmail.com#
+29,Dr. Guilherme Sales,09/13/52 0:00,"Rodovia Cardoso, 98",Jatobá,Cavalcanti,MG,19692-857,34214889,vitor-gabrielsilva@uol.com.br#mailto:vitor-gabrielsilva@uol.com.br#
+30,Pedro Lucas Rocha,06/09/04 0:00,"Feira de Sales, 891",Vila Cloris,Ramos do Galho,RO,87010000,40086327,kamilly35@ig.com.br#mailto:kamilly35@ig.com.br#
+31,Lorena da Rosa,01/25/72 0:00,"Trecho Castro, 5",Boa União 1ª Seção,Nogueira de da Paz,RJ,18718527,81271770,ana-julia91@yahoo.com.br#mailto:ana-julia91@yahoo.com.br#
+32,Dr. Marcos Vinicius Ramos,01/01/54 0:00,"Recanto Martins, 21",Europa,Cavalcanti de Melo,GO,71673412,40844790,ana-laurada-conceicao@uol.com.br#mailto:ana-laurada-conceicao@uol.com.br#
+33,Ana Sophia Silva,01/29/74 0:00,"Colônia de Ribeiro, 96",Grajaú,da Conceição das Flores,PE,67773-020,57603130,davi-luiz65@hotmail.com#mailto:davi-luiz65@hotmail.com#
+34,Bianca Santos,08/19/93 0:00,"Viela Vitor Santos, 17",São Cristóvão,Viana,RO,69001774,59522944,ramosian@gmail.com#mailto:ramosian@gmail.com#
+35,Leandro Freitas,09/01/68 0:00,"Vila Oliveira, 71",Urca,Dias de Dias,DF,54237-160,15033506,ipires@hotmail.com#mailto:ipires@hotmail.com#
+36,Antônio Pinto,11/28/48 0:00,"Estrada de Caldeira, 93",Mineirão,Gomes do Campo,SC,83633-905,61852029,monteiroluiz-gustavo@bol.com.br#mailto:monteiroluiz-gustavo@bol.com.br#
+37,Davi Luiz Moura,10/19/54 0:00,"Colônia Rafael Campos, 9",Vila Nova,Gomes,TO,30971511,74354638,maite82@da.com#mailto:maite82@da.com#
+38,Srta. Catarina Nascimento,09/08/77 0:00,"Vila Fernando da Rosa, 4",Calafate,Viana,PA,06618-085,04458850,nicolecardoso@yahoo.com.br#mailto:nicolecardoso@yahoo.com.br#
+39,Rodrigo Moraes,11/28/65 0:00,"Via Cardoso, 97",Andiroba,Porto Alegre,MG,55782-328,43096330,xdias@hotmail.com#mailto:xdias@hotmail.com#
+40,Pedro Henrique da Cunha,08/24/68 0:00,"Aeroporto de Martins, 96",Vila Independencia 2ª Seção,Vieira Verde,SE,65803-977,55197352,fteixeira@bol.com.br#mailto:fteixeira@bol.com.br#
+41,Pedro Miguel Fogaça,05/06/96 0:00,"Chácara de Campos, 432",Vila São Rafael,Cavalcanti da Praia,BA,99781310,83941398,ymartins@uol.com.br#mailto:ymartins@uol.com.br#
+42,Breno da Rocha,11/16/93 0:00,"Rodovia Murilo Moraes, 746",Nova Gameleira,Campos de Barros,AP,60869298,67155184,stephanyda-mata@da.com#mailto:stephanyda-mata@da.com#
+43,Levi Mendes,10/15/89 0:00,"Distrito Caldeira, 57",Nova Pampulha,Correia de Goiás,SC,64909-937,03948518,cribeiro@uol.com.br#mailto:cribeiro@uol.com.br#
+44,Isabella Almeida,05/22/52 0:00,"Feira de Nunes, 190",Granja De Freitas,Novaes Grande,RS,04555-943,49488485,rezendecamila@cunha.br#mailto:rezendecamila@cunha.br#
+45,Sr. Nathan Peixoto,08/06/93 0:00,"Favela Teixeira, 59",Bonsucesso,Aragão do Oeste,RS,57298-413,52925805,thalesjesus@souza.net#mailto:thalesjesus@souza.net#
+46,Pietro Pinto,07/13/86 0:00,"Área Pedro Miguel Vieira, 61",Vila Minaslandia,Santos dos Dourados,SC,26580-629,26387630,clarice17@bol.com.br#mailto:clarice17@bol.com.br#
+47,Vitor Gabriel Carvalho,02/14/48 0:00,"Loteamento de Novaes, 94",Vila Pilar,Farias do Campo,RS,95374467,85566833,tcardoso@bol.com.br#mailto:tcardoso@bol.com.br#
+48,Thiago Rocha,12/18/94 0:00,"Estação de Silva, 36",Tirol,Oliveira,PB,35154866,76769395,renan80@araujo.org#mailto:renan80@araujo.org#
+49,Luna das Neves,09/07/63 0:00,Trecho Almeida,Vila São Gabriel,Pinto,RO,14490233,29997741,peixotomelissa@martins.br#mailto:peixotomelissa@martins.br#
+50,Valentina Azevedo,07/08/58 0:00,"Viela André Pinto, 9",Venda Nova,Oliveira do Galho,BA,81555-029,48061535,emilly19@hotmail.com#mailto:emilly19@hotmail.com#
+51,Ana Julia Caldeira,01/30/06 0:00,"Trecho Araújo, 94",Xodo-Marize,Pereira,MS,01471042,83521593,kamilly34@bol.com.br#mailto:kamilly34@bol.com.br#
+52,Francisco Caldeira,08/03/95 0:00,"Estação Eduardo da Rosa, 351",São João Batista,da Mata de Goiás,MG,53132-346,15404558,renannogueira@bol.com.br#mailto:renannogueira@bol.com.br#
+53,Matheus Cavalcanti,04/13/58 0:00,"Loteamento Rafaela da Mota, 5",Califórnia,Souza de Pereira,SP,64157-837,33175591,leticia82@uol.com.br#mailto:leticia82@uol.com.br#
+54,Raul Cardoso,02/15/95 0:00,"Ladeira Rezende, 54",Xangri-Lá,Gomes,AL,83111-774,70813706,mirellafernandes@yahoo.com.br#mailto:mirellafernandes@yahoo.com.br#
+55,Dr. João Guilherme Martins,01/07/54 0:00,"Colônia Mendes, 8",Vila Sesc,Duarte de Gomes,PR,43430547,69655238,nataliafreitas@bol.com.br#mailto:nataliafreitas@bol.com.br#
+56,Ana Júlia Freitas,04/12/74 0:00,"Recanto da Costa, 185",Granja De Freitas,Gomes Verde,PB,06068831,76874635,laissilveira@ig.com.br#mailto:laissilveira@ig.com.br#
+57,Gabriel da Mota,09/17/00 0:00,"Ladeira de da Cruz, 656",Vila Independencia 3ª Seção,Cunha,AM,56248220,82047335,manuelacorreia@ig.com.br#mailto:manuelacorreia@ig.com.br#
+58,Isabella Peixoto,06/23/83 0:00,"Recanto Luiz Henrique Ramos, 60",Miramar,Almeida,BA,31076-750,10859738,jmoraes@bol.com.br#mailto:jmoraes@bol.com.br#
+59,Sra. Heloísa Moreira,04/13/82 0:00,"Lagoa de Rodrigues, 64",Nossa Senhora Da Aparecida,da Luz,RO,46452851,85974311,camposcarolina@gmail.com#mailto:camposcarolina@gmail.com#
+60,Caroline Costa,09/14/86 0:00,"Fazenda Moreira, 40",Candelaria,Fogaça da Praia,TO,26913105,40210317,eloah89@gmail.com#mailto:eloah89@gmail.com#
+61,Davi Lucca Oliveira,08/05/64 0:00,"Alameda Pedro Miguel Dias, 33",Vila Cloris,Pereira das Pedras,PA,94080610,32268117,freitasleandro@uol.com.br#mailto:freitasleandro@uol.com.br#
+62,Maria Cecília Carvalho,02/25/63 0:00,"Distrito Santos, 725",Itapoa,Novaes de Moreira,SE,75165-715,55258347,maria-ceciliacaldeira@uol.com.br#mailto:maria-ceciliacaldeira@uol.com.br#
+63,Pedro Miguel Gomes,06/27/54 0:00,"Travessa da Cruz, 64",Gutierrez,Pires das Flores,PB,45156443,02288372,pintojoao-felipe@hotmail.com#mailto:pintojoao-felipe@hotmail.com#
+64,Vitor Gabriel Nogueira,12/13/70 0:00,"Morro de Porto, 4",Nova Floresta,Pereira de Caldeira,MA,84705-016,67091171,rezendesophia@rodrigues.org#mailto:rezendesophia@rodrigues.org#
+65,Eduarda Pires,02/18/89 0:00,"Praia Olivia Souza, 11",Boa União 1ª Seção,Lima do Amparo,TO,49100085,43506170,samuelmoraes@freitas.com#mailto:samuelmoraes@freitas.com#
+66,Enzo Gabriel Novaes,05/01/77 0:00,Condomínio Alves,Vila Suzana Primeira Seção,Moreira de Barbosa,MA,66857712,87002539,csilveira@da.br#mailto:csilveira@da.br#
+67,Isabelly Cardoso,11/15/72 0:00,Área Theo Silveira,Vila Maria,Silveira de Minas,AM,50268344,79751087,da-matafernanda@teixeira.com#mailto:da-matafernanda@teixeira.com#
+68,Diego da Luz,06/26/06 0:00,"Passarela Martins, 17",Nova Cachoeirinha,Sales da Prata,MS,93030-329,88481797,diasfernanda@melo.com#mailto:diasfernanda@melo.com#
+69,Dra. Julia Barbosa,10/30/95 0:00,"Ladeira Correia, 5",Califórnia,Fogaça do Sul,CE,66062280,59067952,znovaes@ig.com.br#mailto:znovaes@ig.com.br#
+70,Mariane Gonçalves,09/15/76 0:00,"Condomínio Dias, 37",Vila Copasa,Lopes,TO,97155658,12609785,nunescatarina@da.com#mailto:nunescatarina@da.com#
+71,Letícia Martins,11/05/96 0:00,"Passarela Alves, 85",Vila Ouro Minas,Cunha de Goiás,MA,56403-550,94528948,da-costadiogo@bol.com.br#mailto:da-costadiogo@bol.com.br#
+72,Noah Moreira,10/24/70 0:00,"Lagoa Sales, 45",Vila São Gabriel Jacui,Dias das Flores,SP,82275286,85461286,pietromoraes@ig.com.br#mailto:pietromoraes@ig.com.br#
+73,Marcelo da Luz,10/05/72 0:00,"Trecho Bernardo Costela, 42",Santa Inês,Rocha de Costa,BA,56695-206,35599561,apeixoto@da.com#mailto:apeixoto@da.com#
+74,João Guilherme Moraes,08/22/69 0:00,"Praça de Barbosa, 62",Santo André,Barbosa,GO,45497392,89840277,pedro-henrique47@hotmail.com#mailto:pedro-henrique47@hotmail.com#
+75,Luiz Gustavo Santos,08/30/52 0:00,"Recanto Pinto, 6",Bonfim,Nascimento de da Cruz,TO,65265588,50126183,catarina89@cavalcanti.org#mailto:catarina89@cavalcanti.org#
+76,Alexandre Cardoso,04/03/45 0:00,"Alameda de Duarte, 19",Santa Isabel,Vieira do Campo,PE,96755783,42144359,andrejesus@gmail.com#mailto:andrejesus@gmail.com#
+77,Arthur da Mota,06/18/63 0:00,"Lagoa Rodrigues, 18",Andiroba,da Cunha,PE,13012-942,53051938,salesclarice@bol.com.br#mailto:salesclarice@bol.com.br#
+78,João Vitor Moreira,08/28/87 0:00,Largo Alícia Ribeiro,Teixeira Dias,Rezende,PE,95346-007,13556619,valentinanovaes@yahoo.com.br#mailto:valentinanovaes@yahoo.com.br#
+79,Enzo Mendes,04/16/73 0:00,"Morro Davi Lucas Moreira, 7",Vila Sumaré,Nunes,AP,82309-969,36629836,elisa00@gmail.com#mailto:elisa00@gmail.com#
+80,Dr. Lucas Gabriel Teixeira,12/10/51 0:00,"Viaduto Evelyn Freitas, 148",São Francisco,Sales da Praia,ES,59394-019,76525993,luiz-fernandonogueira@hotmail.com#mailto:luiz-fernandonogueira@hotmail.com#
+81,Emanuel da Cruz,11/15/74 0:00,"Setor de Lima, 62",Havaí,Lima,BA,65502-878,93536755,eloahmonteiro@moura.net#mailto:eloahmonteiro@moura.net#
+82,Guilherme Nogueira,04/06/66 0:00,"Vale Monteiro, 639",Vila Canto Do Sabiá,Rezende,MG,71233-304,29492334,fferreira@ig.com.br#mailto:fferreira@ig.com.br#
+83,Amanda Pinto,07/07/48 0:00,"Viela Laura Mendes, 867",Mariquinhas,Moura Alegre,DF,77062-049,72957573,ida-conceicao@jesus.com#mailto:ida-conceicao@jesus.com#
+84,Luiz Miguel Viana,04/19/99 0:00,"Alameda Pietra Monteiro, 49",Ernesto Nascimento,da Costa,PB,39672-337,94746696,peixotostephany@martins.com#mailto:peixotostephany@martins.com#
+85,Maria Fernanda Jesus,05/03/07 0:00,"Avenida Lorena Mendes, 47",Goiania,da Rocha de Aragão,PI,42197-702,03874192,xviana@ig.com.br#mailto:xviana@ig.com.br#
+86,Maria Julia Barros,01/23/78 0:00,Recanto de Moreira,Havaí,Ferreira de Minas,PI,32130-080,07268445,hda-rosa@hotmail.com#mailto:hda-rosa@hotmail.com#
+87,Gabrielly Barbosa,03/09/55 0:00,"Trevo das Neves, 40",Conjunto Lagoa,Costa Verde,MA,96625083,57895854,esther14@uol.com.br#mailto:esther14@uol.com.br#
+88,Caio Nogueira,04/14/74 0:00,Viela Araújo,Vila Ecológica,Dias,MS,92557-157,48697942,da-cunhaotavio@hotmail.com#mailto:da-cunhaotavio@hotmail.com#
+89,Valentina Cardoso,11/01/46 0:00,"Lago Santos, 91",Vila Aeroporto,Nascimento,BA,21843256,87946389,bernardovieira@ig.com.br#mailto:bernardovieira@ig.com.br#
+90,Sophia da Mota,08/07/84 0:00,Sítio Duarte,Vila Copacabana,Caldeira da Prata,PA,73751-793,02599441,barbosavitor@uol.com.br#mailto:barbosavitor@uol.com.br#
+91,Yago da Mota,08/22/87 0:00,"Largo de da Cruz, 73",Vila Copacabana,Novaes,AP,34086-839,35037108,peixotomaria@ferreira.br#mailto:peixotomaria@ferreira.br#
+92,Rebeca Gomes,06/23/46 0:00,"Jardim Melo, 92",São Paulo,Cardoso Verde,AP,13589671,59790162,thomasda-mota@yahoo.com.br#mailto:thomasda-mota@yahoo.com.br#
+93,Raquel Alves,11/13/45 0:00,"Largo de Pereira, 39",Delta,Melo,BA,99007524,14171393,ramosanthony@viana.com#mailto:ramosanthony@viana.com#
+94,Daniel Silveira,02/19/52 0:00,"Rua Vitor Lima, 75",Conjunto Capitão Eduardo,Freitas,MT,09206436,10470079,joao-miguelda-paz@yahoo.com.br#mailto:joao-miguelda-paz@yahoo.com.br#
+95,Alexia da Luz,03/03/73 0:00,"Setor da Rocha, 13",Betânia,Gonçalves,PA,95862-241,16013432,correiamariane@hotmail.com#mailto:correiamariane@hotmail.com#
+96,Dr. Leonardo Nascimento,05/07/66 0:00,Distrito Davi Luiz da Paz,Nova Granada,Rodrigues,PR,07391527,76974424,yuri76@da.com#mailto:yuri76@da.com#
+97,Clara Ferreira,09/29/69 0:00,"Aeroporto de Pereira, 86",Rio Branco,Ramos do Norte,RO,23090743,78768977,otavio21@fogaca.org#mailto:otavio21@fogaca.org#
+98,Ana Sophia Cavalcanti,01/08/59 0:00,Fazenda Fogaça,Coração Eucarístico,Gomes,PA,34294-965,20423078,das-nevesleandro@yahoo.com.br#mailto:das-nevesleandro@yahoo.com.br#
+99,Alexandre da Costa,11/18/51 0:00,"Pátio de Castro, 66",Monte São José,Costela,PR,69812-242,28857147,isabelly06@teixeira.br#mailto:isabelly06@teixeira.br#
+100,Dra. Marina Cunha,09/12/62 0:00,Praia Alexandre Viana,Vila Minaslandia,Peixoto,AL,50790211,39453962,fernando16@hotmail.com#mailto:fernando16@hotmail.com#
+101,Davi Lucas das Neves,01/25/59 0:00,"Rodovia Nunes, 409",Monte Azul,Martins,MG,46623-698,15901913,portoenzo-gabriel@castro.com#mailto:portoenzo-gabriel@castro.com#
+102,Maria Julia Rocha,10/25/00 0:00,"Jardim Martins, 76",Jardim Alvorada,Fogaça de Azevedo,AP,29129509,62925369,rafaelpires@ig.com.br#mailto:rafaelpires@ig.com.br#
+103,Davi Lucas Barbosa,04/10/67 0:00,"Área Mariane Viana, 7",Conjunto Califórnia Ii,Jesus,AC,76685-131,83083720,ramosmaria-vitoria@da.br#mailto:ramosmaria-vitoria@da.br#
+104,Dr. Vinicius Rocha,10/20/00 0:00,Passarela Porto,Jardim Do Vale,da Cunha de Barros,PR,60266292,57647226,jazevedo@nogueira.br#mailto:jazevedo@nogueira.br#
+105,Srta. Mariane da Costa,03/25/47 0:00,Trevo Correia,Vila Minaslandia,Silva do Norte,RN,40115187,83973294,fernandesjoao-felipe@lopes.br#mailto:fernandesjoao-felipe@lopes.br#
+106,Elisa Rezende,07/15/97 0:00,"Condomínio Guilherme Santos, 54",Cenaculo,da Mata do Sul,GO,75510635,73903861,fogacaemanuelly@campos.org#mailto:fogacaemanuelly@campos.org#
+107,Levi Moraes,08/08/64 0:00,"Colônia Olivia Lopes, 64",Vila Piratininga,Alves,SP,94257-187,10662075,mouralaura@yahoo.com.br#mailto:mouralaura@yahoo.com.br#
+108,Srta. Maria Fernanda Campos,05/08/66 0:00,"Trecho Novaes, 83",Acaiaca,Rodrigues de Rezende,RR,68043-987,90811384,kcunha@da.org#mailto:kcunha@da.org#
+109,Eloah Monteiro,12/17/67 0:00,"Trevo de Correia, 25",Manacas,Teixeira da Prata,GO,43861749,44270403,maria-fernandacaldeira@bol.com.br#mailto:maria-fernandacaldeira@bol.com.br#
+110,Daniel Porto,06/12/58 0:00,"Parque Maria Vitória Souza, 56",Santa Margarida,Souza,MS,16189199,45252962,costelacaua@hotmail.com#mailto:costelacaua@hotmail.com#
